@@ -1,0 +1,48 @@
+# Audio / media (audio is large, never commit)
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+*.mp4
+
+# Datasets (downloaded on demand)
+data/ESC-50-master/
+data/esc50/
+data/audio/
+data/audio_noisy_*/
+data/raw_csv/
+data/*.zip
+
+# Model weights (downloaded on demand, hundreds of MB)
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.bin
+
+# Python cache
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual env
+venv/
+.venv/
+env/
+.env/
+
+# macOS / IDE
+.DS_Store
+.vscode/
+.idea/
+.claude/
+.cursor/
+
+# Optional: cached pretrained text encoder weights from HF
+.cache_hf/

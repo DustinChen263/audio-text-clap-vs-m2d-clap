@@ -1,0 +1,6 @@
+Dataset: ESC-50, N = 2000, classes = 50
+CLAP      | A→prompts  R@1=0.915  R@5=0.994  MedR=1  | prompts→A  R@1=0.960  R@5=0.980  MedR=1
+M2D-CLAP  | A→prompts  R@1=0.942  R@5=0.995  MedR=1  | prompts→A  R@1=0.980  R@5=0.980  MedR=1
+Zero-shot ESC-50  | CLAP     top-1=0.9150, top-5=0.9935  | M2D-CLAP top-1=0.9415, top-5=0.9950
+CLAP      paired sim μ=0.535, cross-class neg μ=0.066, gap=0.469
+M2D-CLAP  paired sim μ=0.330, cross-class neg μ=0.221, gap=0.110

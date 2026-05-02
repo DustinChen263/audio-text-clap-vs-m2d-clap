@@ -1,0 +1,3 @@
+model,top1_acc,top5_acc
+CLAP,0.915,0.9935
+M2D-CLAP,0.9415,0.995
