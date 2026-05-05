@@ -125,15 +125,20 @@ def main() -> None:
         height=4, aspect=1.1, palette=["#4C72B0", "#DD8452"],
     )
     g.set_axis_labels("", "Recall@K")
-    g.set(ylim=(0, 1))
+    # Leave extra headroom so labels for bars near 1.0 are visible.
+    g.set(ylim=(0, 1.08))
     for ax in g.axes.flat:
         for p in ax.patches:
             h = p.get_height()
             if h <= 0:
                 continue
-            ax.annotate(f"{h:.3f}",
-                        (p.get_x() + p.get_width() / 2, h + 0.01),
-                        ha="center", fontsize=9)
+            y_text = min(h + 0.015, 1.06)
+            ax.annotate(
+                f"{h:.3f}",
+                (p.get_x() + p.get_width() / 2, y_text),
+                ha="center",
+                fontsize=9,
+            )
     g.figure.suptitle(
         "Retrieval against 50 ESC-50 class prompts (a2t = audio→prompt, t2a = prompt→audio)",
         y=1.04,
